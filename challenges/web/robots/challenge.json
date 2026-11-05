@@ -1,0 +1,13 @@
+{
+  "id": 2,
+  "name": "Robots",
+  "category": "Web",
+  "value": 50,
+  "flag": "njccic{Yandex}",
+  "case_insensitive": true,
+  "description": "What is the second user agent NJCCIC disallows ```/``` on their website?\n\n[NJCCIC](https://cyber.nj.gov)",
+  "files": [],
+  "hints": [],
+  "hidden": false,
+  "connection_info": null
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protected Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 0.7rem 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    button:hover {
+      background-color: #43a047;
+    }
+    .card{
+      padding:18px;
+      border-radius:8px;
+      background: linear-gradient(180deg,#071018 0%,#0d1b24 100%);
+      box-shadow:0 10px 30px rgba(0,0,0,0.6);
+      border:1px solid rgba(255,255,255,0.03);
+      margin-top: 1rem;
+      white-space: pre;
+      line-height: 12px;
+      font-family: monospace;
+      font-size: 12px;
+    }
+    @media (max-width:640px){
+      .card { font-size:10px; line-height:10px; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome! You are logged in.</h1>
+  <button onclick="logout()">Logout</button>
+
+  <div class="card" id="ascii-art" aria-label="Obfuscated ASCII art (flag)"></div>
+
+  <script>
+    // Access check
+    if (localStorage.getItem("loggedIn") !== "true") {
+      document.body.innerHTML = "<h1>403 Forbidden</h1><p>You must log in to access this page.</p>";
+      throw new Error("Forbidden access");
+    }
+
+    function logout() {
+      localStorage.removeItem("loggedIn");
+      window.location.href = "login.html";
+    }
+
+    const scrambledReversed = [
+      { idx: 3, s: "> >| )___| |_| |___| |< _  |___| |_____|__| |< _  | |_| |___| |__| | )___|  \\| || |  < <_( | |__( |_( | || | | |" },
+      { idx: 1, s: "  \\ \\___ /\\ _  |____ |\\ _  |___ /     |____ |\\ _  | | | |___ /____ ||___ / | \\ |_ _/ / ___ )_(___ ___ )_(  __ _ " },
+      { idx: 5, s: "   /_/                                                                              \\_\\                 /__|     " },
+      { idx: 0, s: "   ______  ____ _____  ____ ____       _____  ____ _   _ ____ _____  ____ _   _ _____       _          _        " },
+      { idx: 4, s: " | |/____|/____|_____\\_\\ |_|____\\     |_____\\_\\ |_|/___\\|____\\_____|/____|_\\ |_|___|| |___\\|_|___\\___\\| /|_| |_|" },
+      { idx: 2, s: " | |\\ ___\\ | | | |_  | )_| |   | |_____ |_  | )_| | | | |   | ||_  |\\ ___\\ |\\  || | | |__ /| |__ /__ /| | \\ _' |" }
+    ];
+
+    const ordered = scrambledReversed
+      .slice()
+      .sort((a,b)=>a.idx-b.idx)
+      .map(o => o.s.split('').reverse().join(''))
+      .join("\n");
+
+    document.getElementById('ascii-art').textContent = ordered;
+  </script>
+</body>
+</html>

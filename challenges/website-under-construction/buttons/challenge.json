@@ -1,0 +1,13 @@
+{
+  "id": 7,
+  "name": "Buttons",
+  "category": "Website Under Construction",
+  "value": 20,
+  "flag": "njccic{Y0u-Found-m3}",
+  "description": "Try to mess around with the buttons on [this website](https://aidanlenahan.github.io/njccic9-ctf) under construction.",
+  "connection_info": "https://aidanlenahan.github.io/njccic9-ctf",
+  "case_insensitive": false,
+  "files": [],
+  "hints": [],
+  "hidden": false
+}

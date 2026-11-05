@@ -1,0 +1,13 @@
+{
+  "id": 16,
+  "name": "Old Compression, Older Mistakes",
+  "category": "OSINT",
+  "value": 40,
+  "flag": "njccic{0992-8300}",
+  "description": "A vulnerability reported before 2015 affected a messaging service from Novell. It could be exploited remotely by sending an unusually long Accept-Language header to its default port. Find the CVE entry and extract the necessary information to form the flag. The flag contains the last four digits of the CVE number, a hyphen, as well as the exploited port number.\n\nExample: ```njccic{0751-8080}```, first four digits from CVE-2010-0751, next four digits representing port 8080",
+  "case_insensitive": false,
+  "files": [],
+  "hints": [],
+  "hidden": false,
+  "connection_info": null
+}

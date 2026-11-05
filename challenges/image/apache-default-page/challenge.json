@@ -1,0 +1,15 @@
+{
+  "id": 6,
+  "name": "Apache Default Page",
+  "category": "Image",
+  "value": 30,
+  "flag": "njccic{wr0ng-f!le-3xt}",
+  "description": "This challenge is really easy. Read the file to get the flag.\n\n[Instructions](challenges/image/apache-default-page/handout/instructions.png)",
+  "files": [
+    "handout/Apache2-default.png"
+  ],
+  "case_insensitive": false,
+  "hints": [],
+  "hidden": false,
+  "connection_info": null
+}

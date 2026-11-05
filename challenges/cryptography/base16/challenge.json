@@ -1,0 +1,21 @@
+{
+  "id": 15,
+  "name": "Base 16 (^16)",
+  "category": "Cryptography",
+  "value": 100,
+  "flag": "njccic{wasted-your-time}",
+  "description": "<strong>Warning: this challenge is annoying.</strong>\n\n[Good luck!](challenges/cryptography/base16/handout/challenge.txt)",
+  "files": [
+    "handout/challenge.txt"
+  ],
+  "hints": [
+    {
+      "title": "blatant instructions",
+      "content": "encoded in base 16, *16 times*",
+      "cost": 75
+    }
+  ],
+  "case_insensitive": false,
+  "hidden": false,
+  "connection_info": null
+}

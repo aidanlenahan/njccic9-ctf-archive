@@ -1,0 +1,13 @@
+{
+  "id": 3,
+  "name": "Sneaky Robots",
+  "category": "Web",
+  "value": 30,
+  "flag": "njccic{beep-boop}",
+  "description": "Robots are everywhere... some could even be *[here](./)*...",
+  "case_insensitive": false,
+  "files": [],
+  "hints": [],
+  "hidden": false,
+  "connection_info": null
+}

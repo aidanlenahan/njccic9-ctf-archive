@@ -1,0 +1,13 @@
+{
+  "id": 9,
+  "name": "Pattern in Paragraph",
+  "category": "Website Under Construction",
+  "value": 40,
+  "flag": "njccic{latinhiding}",
+  "case_insensitive": true,
+  "description": "Look closely at the paragraphs on [this](https://aidanlenahan.github.io/njccic9-ctf/elements.html) page.\n\nThere should be a pattern in a few certain words...",
+  "files": [],
+  "hints": [],
+  "hidden": false,
+  "connection_info": null
+}

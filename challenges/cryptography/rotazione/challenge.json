@@ -1,0 +1,13 @@
+{
+  "id": 13,
+  "name": "Rotazione",
+  "category": "Cryptography",
+  "value": 20,
+  "flag": "njccic{julius-caesar-would-be-proud}",
+  "description": "Decodifica haec, vexillum circumdatum est solitis \"njccic{\" et \"}\":\n\n```alczlj-trvjri-nflcu-sv-giflu```",
+  "case_insensitive": false,
+  "files": [],
+  "hints": [],
+  "hidden": false,
+  "connection_info": null
+}

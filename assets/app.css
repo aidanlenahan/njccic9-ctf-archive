@@ -1,0 +1,51 @@
+/* Small additions on top of the CTFd core theme (theme/assets/ctfd-core.css). */
+body { padding-top: 56px; }
+main { min-height: calc(100vh - 56px - 60px); }
+.footer { position: static; z-index: auto; }
+
+#theme-toggle { border: 0; }
+
+.challenge-button .challenge-inner p { margin-bottom: .25rem; font-size: 1.05rem; }
+.challenge-button .challenge-inner span { font-size: 1.25rem; }
+
+.challenge-desc pre, .writeup pre {
+  background: var(--bs-tertiary-bg);
+  padding: .75rem 1rem;
+  border-radius: .375rem;
+  overflow-x: auto;
+}
+.challenge-desc code, .writeup code { overflow-wrap: anywhere; }
+.challenge-desc p:last-child { margin-bottom: .5rem; }
+.challenge-hints summary { cursor: pointer; }
+
+.challenge-input.wrong { animation: shake .4s; border-color: var(--bs-danger); }
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+@media (prefers-reduced-motion: reduce) { .challenge-input.wrong { animation: none; } }
+
+.me-row td, .me-row th { font-weight: 700; }
+
+#score-graph { min-height: 0; }
+.score-graph-svg { width: 100%; height: auto; display: block; }
+.score-graph-svg .grid { stroke: var(--bs-border-color); stroke-width: 1; }
+.score-graph-svg .axis { fill: var(--bs-secondary-color); font-size: 13px; font-family: inherit; }
+.score-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: .25rem 1.25rem; margin-bottom: .5rem; font-size: .9rem; }
+.score-legend i { display: inline-block; width: 12px; height: 12px; border-radius: 2px; margin-right: .35rem; vertical-align: -1px; }
+
+.writeup { max-width: 860px; margin: 0 auto; }
+.writeup h2 { margin-top: 2rem; padding-bottom: .3rem; border-bottom: 1px solid var(--bs-border-color); font-size: 1.5rem; }
+.writeup h3 { margin-top: 1.5rem; font-size: 1.2rem; }
+.writeup table { width: auto; margin-bottom: 1rem; }
+.writeup table th, .writeup table td { border: 1px solid var(--bs-border-color); padding: .35rem .75rem; }
+.writeup blockquote { border-left: 4px solid var(--bs-border-color); padding-left: 1rem; color: var(--bs-secondary-color); }
+.writeup img { max-width: 100%; }
+
+.help-page h2 { margin-top: 1.5rem; }
+
+@media (max-width: 575.98px) {
+  .modal-body.px-5 { padding-left: 1rem !important; padding-right: 1rem !important; }
+  .jumbotron { padding: 2rem 1rem; }
+}

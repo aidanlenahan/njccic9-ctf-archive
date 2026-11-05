@@ -1,0 +1,62 @@
+{
+  "note": "Scoreboard snapshot from the live CTFd instance (njccic9.ddns.net). Hidden admin account excluded; IPs and credentials stripped.",
+  "users": [
+    {
+      "id": 2,
+      "name": "bamboo",
+      "solves": []
+    },
+    {
+      "id": 3,
+      "name": "testuser",
+      "solves": [
+        {
+          "challenge_id": 1,
+          "date": "2025-09-22T14:31:28Z"
+        },
+        {
+          "challenge_id": 2,
+          "date": "2025-09-22T18:28:56Z"
+        },
+        {
+          "challenge_id": 3,
+          "date": "2025-09-24T14:39:52Z"
+        },
+        {
+          "challenge_id": 5,
+          "date": "2025-10-06T14:38:55Z"
+        },
+        {
+          "challenge_id": 13,
+          "date": "2025-10-12T21:46:49Z"
+        },
+        {
+          "challenge_id": 14,
+          "date": "2025-10-12T21:47:06Z"
+        },
+        {
+          "challenge_id": 16,
+          "date": "2025-10-15T12:26:55Z"
+        },
+        {
+          "challenge_id": 15,
+          "date": "2025-10-15T12:30:28Z"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "slopey",
+      "solves": [
+        {
+          "challenge_id": 3,
+          "date": "2025-09-23T17:02:34Z"
+        },
+        {
+          "challenge_id": 2,
+          "date": "2025-09-23T17:05:52Z"
+        }
+      ]
+    }
+  ]
+}

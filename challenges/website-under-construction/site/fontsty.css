@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "SecretFont";
+  src: url("secretfont.ttf") format("truetype");
+  font-display: swap;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.secret {
+  font-family: "SecretFont", system-ui, monospace;
+  letter-spacing: 0.02em;
+}

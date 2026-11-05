@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-box {
+      background: #1e1e1e;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #4CAF50;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.7rem;
+      margin: 0.5rem 0;
+      border: none;
+      border-radius: 6px;
+      background-color: #2b2b2b;
+      color: #f1f1f1;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.7rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 0.5rem 0;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #43a047;
+    }
+
+    .error {
+      color: red;
+      text-align: center;
+      margin-top: 0.5rem;
+      min-height: 1.2em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h2>Login</h2>
+
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+
+    <button onclick="gohome()">Home</button>
+    <div class="error" id="error"></div>
+  </div>
+
+  <script>
+    const VALID_USERNAME = "mscott";
+    const VALID_PASSWORD = "worldsbestboss";
+
+    function gohome() {
+      window.location.href = "index.html";
+    }
+
+    // Handle login form submission
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // prevent page reload
+
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      if (user === VALID_USERNAME && pass === VALID_PASSWORD) {
+        localStorage.setItem("loggedIn", "true");
+        window.location.href = "postlogin.html";
+      } else {
+        document.getElementById("error").textContent = "Invalid credentials.";
+      }
+    });
+
+    // Redirect to postlogin.html if already logged in
+    if (localStorage.getItem("loggedIn") === "true") {
+      window.location.href = "postlogin.html";
+    }
+  </script>
+
+</body>
+</html>

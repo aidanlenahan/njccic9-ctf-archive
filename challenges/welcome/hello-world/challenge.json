@@ -1,0 +1,13 @@
+{
+  "id": 1,
+  "name": "Hello, World!",
+  "category": "Welcome",
+  "value": 10,
+  "flag": "njccic{it-worked!}",
+  "description": "Flag is ```njccic{it-worked!}```",
+  "case_insensitive": false,
+  "files": [],
+  "hints": [],
+  "hidden": false,
+  "connection_info": null
+}

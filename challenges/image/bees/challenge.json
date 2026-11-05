@@ -1,0 +1,15 @@
+{
+  "id": 5,
+  "name": "Bees",
+  "category": "Image",
+  "value": 20,
+  "flag": "njccic{h0n3y}",
+  "description": "Did you know QR codes could store tons of data?",
+  "files": [
+    "handout/bee.png"
+  ],
+  "case_insensitive": false,
+  "hints": [],
+  "hidden": false,
+  "connection_info": null
+}

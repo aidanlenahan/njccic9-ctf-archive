@@ -1,0 +1,13 @@
+{
+  "id": 10,
+  "name": "Metadata",
+  "category": "Website Under Construction",
+  "value": 40,
+  "flag": "njccic{ex!f-data-is-sneaky}",
+  "description": "Take a look at a few of the images on the [website](https://aidanlenahan.github.io/njccic9-ctf). Maybe you can find the flag using one of the images...",
+  "case_insensitive": false,
+  "files": [],
+  "hints": [],
+  "hidden": false,
+  "connection_info": null
+}

@@ -1,0 +1,13 @@
+{
+  "id": 12,
+  "name": "Search",
+  "category": "Website Under Construction",
+  "value": 40,
+  "flag": "njccic{Maybe-I-Should-Fix-This}",
+  "case_insensitive": true,
+  "description": "Try **searching** for this flag. Not all parts of [this website](https://aidanlenahan.github.io/njccic9-ctf) work, so maybe there are some parts of the website that are not implemented.",
+  "files": [],
+  "hints": [],
+  "hidden": false,
+  "connection_info": null
+}

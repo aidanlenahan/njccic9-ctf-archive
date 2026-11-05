@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NJCCIC Group 9</title>
+  <meta name="description" content="NJCCIC Advanced Internship Group 9 CTF: static archive with challenges, scoreboard and writeups.">
+  <link rel="icon" href="img/favicon-3.png" type="image/png">
+  <script>
+    // Apply the saved/system color mode before first paint (CTFd core theme uses data-bs-theme).
+    (function () {
+      var m = null;
+      try { m = localStorage.getItem("njccic9.theme"); } catch (e) {}
+      if (!m) m = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-bs-theme", m);
+    })();
+  </script>
+  <link rel="stylesheet" href="theme/assets/ctfd-core.css">
+  <link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a href="#/" class="navbar-brand">
+      <img class="img-responsive ctf_logo" src="img/favicon.ico" alt="NJCCIC Group 9" height="25">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#base-navbars"
+            aria-controls="base-navbars" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="base-navbars">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="#/help" data-route="help">Help</a></li>
+        <li class="nav-item"><a class="nav-link" id="nav-webuc" href="#" target="_blank" rel="noopener">WebUC</a></li>
+        <li class="nav-item"><a class="nav-link" href="#/users" data-route="users">Users</a></li>
+        <li class="nav-item"><a class="nav-link" href="#/scoreboard" data-route="scoreboard">Scoreboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="#/challenges" data-route="challenges">Challenges</a></li>
+        <li class="nav-item"><a class="nav-link" href="#/writeups" data-route="writeups">Writeups</a></li>
+      </ul>
+      <ul class="navbar-nav ms-md-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#/settings" data-route="settings" title="Profile &amp; settings">
+            <i class="fas fa-user-circle pe-1"></i><span id="nav-username"></span>
+            <span class="badge bg-secondary ms-1" id="nav-score">0</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link btn btn-link" id="theme-toggle" type="button" title="Toggle dark mode" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main role="main" id="app">
+  <div class="min-vh-50 d-flex align-items-center pt-5">
+    <div class="text-center w-100 pt-5"><i class="fas fa-circle-notch fa-spin fa-3x fa-fw spinner"></i></div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container text-center">
+    <small class="text-muted">
+      Static archive of the NJCCIC Group 9 CTF &middot; progress is saved in this browser &middot;
+      look &amp; feel from the <a class="text-secondary" href="https://ctfd.io" target="_blank" rel="noopener">CTFd</a> core theme
+    </small>
+  </div>
+</footer>
+
+<div id="challenge-window" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
+<div id="toast-area" class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/sha256.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

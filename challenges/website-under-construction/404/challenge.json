@@ -1,0 +1,13 @@
+{
+  "id": 8,
+  "name": "404",
+  "category": "Website Under Construction",
+  "value": 20,
+  "flag": "njccic{S3CR3T-2978}",
+  "description": "Which page shows up when you try accessing a page that doesn't exist?\n\nhttps://aidanlenahan.github.io/njccic9-ctf/",
+  "case_insensitive": false,
+  "files": [],
+  "hints": [],
+  "hidden": false,
+  "connection_info": null
+}

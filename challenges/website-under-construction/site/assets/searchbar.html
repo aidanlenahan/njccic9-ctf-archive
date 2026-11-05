@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Searchbar</title>
+  <style>
+    :root{
+      --bg:#0b0b0d;
+      --card:#071018;
+      --fg:#e6f3ff;
+      --pad:20px;
+      --mono: "Courier New", monospace;
+    }
+    html,body{
+      height:100%;
+      margin:0;
+      background:var(--bg);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:var(--mono);
+      color:var(--fg);
+    }
+    .card{
+      background: linear-gradient(180deg,var(--card) 0%, #0d1b24 100%);
+      padding:var(--pad);
+      border-radius:10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      border:1px solid rgba(255,255,255,0.03);
+      max-width: 95vw;
+      overflow:auto;
+    }
+    pre {
+      margin:0;
+      white-space: pre;
+      line-height: 12px;
+      font-size: 12px;
+    }
+    @media (max-width:640px){
+      pre { font-size:10px; line-height:10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card" role="img" aria-label="Obfuscated ASCII art (reconstructed in browser)">
+    <pre id="art"></pre>
+  </div>
+
+<script>
+
+
+const scrambled = [
+  { idx: 6, s: "LyBfX198fCB8X18gICBfX18gIF8gICBffCB8IF9ffCB8ICAgICB8ICBfX18oXylfICBfXyAgfF8gICBffCB8X18gKF8pX19cIFwgIA==" },
+  { idx: 2, s: "fCAnXyBcIHwgfC8gX18vIF9ffCB8LyBfX3wgfHwgfFwvfCB8LyBfYCB8IHwgfCB8ICdfIFwgLyBfIFxfX19fX3wgfF9fX19fICAgIA==" },
+  { idx: 9, s: "fF9fX18vfF98IHxffFxfX18vIFxfXyxffF98XF9fLF98ICAgICB8X3wgICB8Xy9fL1xfXCAgICB8X3wgfF98IHxffF98X19fLyB8IA==" },
+  { idx: 0, s: "ICAgICAgICBfICAgICAgICAgIF8gICAgICAgX19fXyAgX18gICAgICAgICAgICAgXyAgICAgICAgICAgICAgIF9fXyAgICAgICAgIA==" },
+  { idx: 4, s: "fF98IHxffC8gfFxfX19cX19ffF98XF9fX3wgfHxffCAgfF98XF9fLF98XF9fLCB8Xy5fXy8gXF9fX3wgICAgfF9fX3wgICAgICAgIA==" },
+  { idx: 1, s: "IF8gX18gIChfKSBfX18gX19fKF8pIF9fXyAvIC8gIFwvICB8IF9fIF8gXyAgIF98IHxfXyAgIF9fXyAgICAgfF8gX3wgICAgICAgIA==" },
+  { idx: 8, s: "IF9fXykgfCB8IHwgfCAoXykgfCB8X3wgfCB8IChffCB8X19fX198ICBffCB8IHw+ICA8X19fX198IHwgfCB8IHwgfCBcX18gXD4gPg==" },
+  { idx: 5, s: "IF9fX198X18vICAgICAgICAgICAgICAgIF9cX1wgIF8gICAgICAgX19ffF9fXy8gICAgICAgIF9fX19fIF8gICAgIF8gICBfXyAgIA==" },
+  { idx: 3, s: "fCB8IHwgfHwgfCAoX3wgKF9ffCB8IChfPCA8IHwgfCAgfCB8IChffCB8IHxffCB8IHxfKSB8ICBfXy9fX19fX3wgfF9fX19ffCAgIA==" },
+  { idx: 7, s: "XF9fXyBcfCAnXyBcIC8gXyBcfCB8IHwgfCB8LyBfYCB8X19fX198IHxfICB8IFwgXC8gL19fX198IHwgfCAnXyBcfCAvIF9ffCB8IA==" },
+  { idx: 10, s: "ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAvXy8gIA==" }
+];
+
+// decode base64 safely (utf-8)
+function b64decodeUtf8(b64) {
+  try {
+    // atob returns binary string; decode percent-encoding for utf-8 safety
+    return decodeURIComponent(Array.prototype.map.call(atob(b64), function(c){
+      return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+  } catch (e) {
+    // fallback for browsers/environments that might not support decodeURIComponent trick
+    return atob(b64);
+  }
+}
+
+// reconstruct: decode, sort by idx, join with newline, then render
+const reconstructed = scrambled
+  .map(item => ({ idx: item.idx, line: b64decodeUtf8(item.s) }))
+  .sort((a,b) => a.idx - b.idx)
+  .map(o => o.line)
+  .join("\n");
+
+document.getElementById("art").textContent = reconstructed;
+</script>
+</body>
+</html>

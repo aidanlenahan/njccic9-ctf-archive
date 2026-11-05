@@ -1,0 +1,13 @@
+{
+  "id": 11,
+  "name": "403",
+  "category": "Website Under Construction",
+  "value": 50,
+  "flag": "njccic{insecure-creds}",
+  "case_insensitive": true,
+  "description": "Why do I get a 403 error when trying to access [this page?](https://aidanlenahan.github.io/njccic9-ctf/postlogin.html) If only there was a way...",
+  "files": [],
+  "hints": [],
+  "hidden": false,
+  "connection_info": null
+}

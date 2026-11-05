@@ -1,0 +1,13 @@
+{
+  "id": 17,
+  "name": "Layers",
+  "category": "Cryptography",
+  "value": 50,
+  "flag": "njccic{lottalayers}",
+  "hidden": true,
+  "description": "```=0TS300VTp0TNR1MThEW10ESUl1UYVjQPdFR0EEWzYUT```\n\nrot13 => base32 => base64 => reverse",
+  "case_insensitive": false,
+  "files": [],
+  "hints": [],
+  "connection_info": null
+}

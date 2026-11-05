@@ -1,0 +1,13 @@
+{
+  "id": 14,
+  "name": "Words Unlock",
+  "category": "Cryptography",
+  "value": 30,
+  "flag": "njccic{flag-unlocked!}",
+  "case_insensitive": true,
+  "description": "What language were the instructions of the [Rotazione](#/challenges/13) challenge in?\n\n```yjvkvn{feit-fnewpvew!}```",
+  "files": [],
+  "hints": [],
+  "hidden": false,
+  "connection_info": null
+}
